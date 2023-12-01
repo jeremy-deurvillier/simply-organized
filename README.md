@@ -18,59 +18,59 @@ Simply Organized veut donner envie à l'utilisateur d'**être productif**.
 
 ## Aujourd'hui
 
-- Affiche la liste des projets / activités du jour (ordonnés par importance / urgence)
-- Ajouter un projet / activité (+ ajout catégories, + ajout tags)
-    - Ajouter des invités
-    - Donner les droits sur les activités à un invité
-    - Ajouter une alarme à une activité
-- Supprimer un projet / activité
-- Mettre à jour un projet / activité
-- Démarrer une activité
-    - Afficher le pomodoro / Calculer la durée
-    - Bruits blancs
-    - Ajouter des notes rapides
-    - Ajouter temps au pomodoro
-    - Apprendre quelque chose si temps activité validé et temps restant (Wikipédia, autres ...)
-- Annuler une activité
-- Valider une activité
-- Lire ses notes rapides
-- Affiche le nombre d'heure de libre
-- Affiche les événements du jour (aperçu)
+- [ ] Affiche la liste des projets / activités du jour (ordonnés par importance / urgence)
+- [ ] Ajouter un projet / activité (+ ajout catégories, + ajout tags)
+    - [ ] Ajouter des invités
+    - [ ] Donner les droits sur les activités à un invité
+    - [ ] Ajouter une alarme à une activité
+- [ ] Supprimer un projet / activité
+- [ ] Mettre à jour un projet / activité
+- [ ] Démarrer une activité
+    - [ ] Afficher le pomodoro / Calculer la durée
+    - [ ] Bruits blancs
+    - [ ] Ajouter des notes rapides
+    - [ ] Ajouter temps au pomodoro
+    - [ ] Apprendre quelque chose si temps activité validé et temps restant (Wikipédia, autres ...)
+- [ ] Annuler une activité
+- [ ] Valider une activité
+- [ ] Lire ses notes rapides
+- [ ] Affiche le nombre d'heure de libre
+- [ ] Affiche les événements du jour (aperçu)
 
 ## Calendrier
 
-- Affiche le calendrier de la semaine
-- Possibilité d'afficher le mois en cours
-- Ajouter un événement
-    - Ajouter une alarme
-    - Ajouter des invités
-    - Ajouter des ressources
-    - Ajouter une localisation
-    - Partager l'événement
-- Affiche les détails d'un événement au clique sur une date
+- [ ] Affiche le calendrier de la semaine
+- [ ] Possibilité d'afficher le mois en cours
+- [ ] Ajouter un événement
+    - [ ] Ajouter une alarme
+    - [ ] Ajouter des invités
+    - [ ] Ajouter des ressources
+    - [ ] Ajouter une localisation
+    - [ ] Partager l'événement
+- [ ] Affiche les détails d'un événement au clique sur une date
 
 ## Badges
 
-- Affiche tous les badges, avec pagination
-- Affiche les détails du badge au clique
-- Badges non obtenu grisés
+- [ ] Affiche tous les badges, avec pagination
+- [ ] Affiche les détails du badge au clique
+- [ ] Badges non obtenu grisés
 
 ## Statistiques
 
-- Affiche les statistiques de l'utilisateur
-    - Nombre de projets
-    - Nombre d'activités
-    - Nombre d'activités validées
-    - Nombre de pomodoros
-- Affiche les statistiques de l'utilisateur
-    - Filtre par jour / semaine / mois / année
-    - Filtre par catégorie
-    - Filtre par tag
+- [ ] Affiche les statistiques de l'utilisateur
+    - [ ] Nombre de projets
+    - [ ] Nombre d'activités
+    - [ ] Nombre d'activités validées
+    - [ ] Nombre de pomodoros
+- [ ] Affiche les statistiques de l'utilisateur
+    - [ ] Filtre par jour / semaine / mois / année
+    - [ ] Filtre par catégorie
+    - [ ] Filtre par tag
     - Autres ?
 
 ## Authentification
 
-- La plupart des fonctionnalités sont accessibles sans inscription
-- Pour inviter un nouvel utilisateur, on doit être inscrit, connecté et avoir valider son e-mail
-- Pour partager l'URL d'un événement, on doit être inscrit, connecté et avoir valider son e-mail
-- La page Statistiques demande que l'utilisateur soit inscrit et connecté
+- [ ] La plupart des fonctionnalités sont accessibles sans inscription
+- [ ] Pour inviter un nouvel utilisateur, on doit être inscrit, connecté et avoir valider son e-mail
+- [ ] Pour partager l'URL d'un événement, on doit être inscrit, connecté et avoir valider son e-mail
+- [ ] La page Statistiques demande que l'utilisateur soit inscrit et connecté
