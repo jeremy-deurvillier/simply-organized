@@ -1,15 +1,13 @@
 import { Box, Em, Flex, Heading, Text } from "@radix-ui/themes"
 import { Link, useRouteError } from "react-router-dom"
-import '../../styles.css'
+import HeaderLogo from "../header-logo/HeaderLogo"
 
 export default function Error() {
     const error = useRouteError()
 
     return (
         <Flex direction='column' justify='between' className='viewport-height-full'>
-            <Flex justify='center' align='center' className='viewport-height-medium'>
-                LOGO
-            </Flex>
+            <HeaderLogo />
             <Flex direction='column' justify='between' align='center' className='viewport-height-medium'>
                 <Box py='3'>
                     <Heading as='h1' hidden>Simply Organized</Heading>

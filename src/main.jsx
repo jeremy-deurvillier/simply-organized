@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom'
 import router from './components/routes/Routes'
 import '@radix-ui/themes/styles.css'
+import './styles.css' // Thème personnalisé pour Radix UI + autres propriétés CSS communes
 import { Theme } from '@radix-ui/themes'
 
 ReactDOM.createRoot(document.getElementById('app')).render(
