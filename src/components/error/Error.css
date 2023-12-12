@@ -1,0 +1,69 @@
+.errorWrapper {
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.errorWrapper > div {
+    flex: 1 0 auto;
+}
+
+.errorContent {
+    height: 50vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.errorContent > div {
+    margin: 10px 0;
+}
+
+.errorContent h2 {
+    font-size: 24px;
+}
+
+.errorContent a, 
+.errorContent a:visited {
+    text-decoration: none;
+    color: #FB9649;
+    position: relative;
+}
+
+.errorContent a::before {
+    content: "";
+    background: #FB9649;
+    height: 2px;
+    width: 0;
+    display: inline-block;
+    position: absolute;
+    transform: translateY(20px);
+    transition: width .5s;
+}
+
+.errorContent a:hover::before {
+    width: 100%;
+}
+
+.errorContent em {
+    font-style: italic;
+}
+
+@media screen and (min-width: 768px) {
+    .errorWrapper {
+        width: 100vw;
+        flex-flow: row nowrap;
+    }
+
+    .errorWrapper > div {
+        height: 100vh;
+        flex: 0 0 50vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .errorContent {
+        justify-content: center;
+    }
+}
