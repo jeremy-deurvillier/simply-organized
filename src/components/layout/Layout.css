@@ -1,0 +1,4 @@
+.mainContent {
+    background-color: #F8D9C6;
+    min-height: calc(100vh - 52px); /* ***** 52px = height .header ***** */
+}
