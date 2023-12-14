@@ -1,0 +1,52 @@
+.navbar {
+    background-color: #fff;
+    border-radius: 10px 10px 0 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 6px;
+}
+
+.navbar ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+.navbar a,
+.navbar a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        border-radius: 12px;
+        left: 10%;
+        right: 10%;
+        bottom: 12px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .navbar {
+        border-radius: 12px;
+        left: 20%;
+        right: 20%;
+        bottom: 32px;
+    }
+}
+
+@media screen and (min-width: 1360px) {
+    .navbar {
+        border-radius: 12px;
+        left: 25%;
+        right: 25%;
+        bottom: 32px;
+    }
+}
