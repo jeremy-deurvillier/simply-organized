@@ -10,6 +10,8 @@ export default function Layout() {
             <Header />
 
             <main className='mainContent'>
+                <h1 hidden>Simply Organized</h1>
+                
                 <Outlet />
             </main>
 

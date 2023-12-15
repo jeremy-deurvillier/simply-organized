@@ -1,25 +1,30 @@
+import Activity from '../activity/Activity'
 import './Today.css'
 
+const projects = [
+  {id:1, title: 'Projet 1', description: ''},
+  {id:1, title: 'Projet 2', description: ''},
+]
+
 const activities = [
-  {id:1, title: 'Mon titre 1', state: {done: false, canceled: false}},
-  {id:2, title: 'Mon titre 2', state: {done: false, canceled: false}},
-  {id:3, title: 'Mon titre 3', state: {done: false, canceled: false}},
-  {id:4, title: 'Mon titre 4', state: {done: false, canceled: false}},
-  {id:5, title: 'Mon titre 5', state: {done: false, canceled: false}},
+  {id:1, name: 'Mon titre 1', state: {done: false, canceled: false}, project: projects[0]},
+  {id:2, name: 'Mon titre 2', state: {done: false, canceled: false}, project: projects[0]},
+  {id:3, name: 'Mon titre 3', state: {done: false, canceled: false}, project: projects[1]},
+  {id:4, name: 'Mon titre 4', state: {done: false, canceled: false}, project: projects[1]},
+  {id:5, name: 'Mon titre 5', state: {done: false, canceled: false}, project: projects[1]},
 
 ]
 
 export default function Today() {
   return (
     <section className='todayPage'>
-        <h1>Simply Organized</h1>
         <h2>
             Aujourd'hui
-            <span className='badge'>12</span>
+            <span className='badge'>{activities.length}</span>
         </h2>
         <div className='todayContent'>
             {
-              activities.map(activity => <div key={activity.id}>{activity.title}</div>)
+              activities.map(activity => <Activity  key={activity.id} activity={activity} />)
             }
         </div>
     </section>
