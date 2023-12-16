@@ -1,6 +1,8 @@
 .activity {
     background-color: #FB9649;
+    position: relative;
     border-radius: 18px;
+    overflow: hidden;
     padding: 5px;
     margin: 5px;
 }

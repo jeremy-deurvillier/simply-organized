@@ -1,0 +1,24 @@
+.groupActions {
+    --defaultTransform: translate(100%);
+    --currentTranform: var(--defaultTransform);
+
+    background-color: #B29EF8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 50px 18px 18px 50px;
+    transform: var(--currentTranform);
+    transition: transform .5s;
+    padding: 5px;
+}
+
+.groupActions a,
+.groupActions a:visited {
+    font-weight: bold;
+    text-decoration: none;
+    color: #9D53FF;
+}

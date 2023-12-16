@@ -7,12 +7,11 @@ const projects = [
 ]
 
 const activities = [
-  {id:1, name: 'Mon titre 1', state: {done: false, canceled: false}, project: projects[0]},
-  {id:2, name: 'Mon titre 2', state: {done: false, canceled: false}, project: projects[0]},
-  {id:3, name: 'Mon titre 3', state: {done: false, canceled: false}, project: projects[1]},
-  {id:4, name: 'Mon titre 4', state: {done: false, canceled: false}, project: projects[1]},
-  {id:5, name: 'Mon titre 5', state: {done: false, canceled: false}, project: projects[1]},
-
+  {id:1, name: 'Mon titre 1', state: {done: false, progress: false}, project: projects[0]},
+  {id:2, name: 'Mon titre 2', state: {done: false, progress: true}, project: projects[0]},
+  {id:3, name: 'Mon titre 3', state: {done: false, progress: false}, project: projects[1]},
+  {id:4, name: 'Mon titre 4', state: {done: false, progress: true}, project: projects[1]},
+  {id:5, name: 'Mon titre 5', state: {done: false, progress: false}, project: projects[1]},
 ]
 
 export default function Today() {
