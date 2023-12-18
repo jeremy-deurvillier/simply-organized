@@ -22,6 +22,15 @@
 
 .errorContent h2 {
     font-size: 24px;
+    text-align: center;
+}
+
+.errorContent h2 svg {
+    transform: translateY(5px);
+}
+
+.errorContent h2 span {
+    display: block;
 }
 
 .errorContent a, 
@@ -48,6 +57,12 @@
 
 .errorContent em {
     font-style: italic;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 80vw;
+    display: inline-block;
+    overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -60,10 +75,18 @@
         height: 100vh;
         flex: 0 0 50vw;
     }
+
+    .errorContent em {
+        width: 40vw;
+    }
 }
 
 @media screen and (min-width: 1024px) {
     .errorContent {
         justify-content: center;
+    }
+
+    .errorContent em {
+        width: 30vw;
     }
 }

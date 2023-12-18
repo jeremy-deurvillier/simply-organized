@@ -1,4 +1,5 @@
 .todayPage {
+    color: #FB9649;
     padding: 5px;
 }
 
@@ -11,12 +12,13 @@
 .badge {
     font-size: 16px;
     font-weight: bolder;
-    background-color: #FB9649;
+    color: #9D53FF;
     width: 20px;
     height: 20px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid #9D53FF;
     border-radius: 50%;
     padding: 2px;
     margin: 5px;

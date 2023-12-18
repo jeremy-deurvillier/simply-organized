@@ -1,4 +1,5 @@
 .header {
+    color: #FB9649;
     height: 52px;
     display: flex;
     justify-content: flex-start;
@@ -9,6 +10,7 @@
 }
 
 .header .datetime {
+    font-size: 18px;
     font-weight: bold;
 }
 

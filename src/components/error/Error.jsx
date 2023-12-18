@@ -1,4 +1,5 @@
 import { Link, useRouteError } from "react-router-dom"
+import { BiSolidMessageError } from "react-icons/bi"
 import HeaderLogo from "../header-logo/HeaderLogo"
 import './Error.css'
 
@@ -12,7 +13,10 @@ export default function Error() {
             <div className='errorContent'>
                 <div>
                     <h1 hidden>Simply Organized</h1>
-                    <h2>Erreur</h2>
+                    <h2>
+                        <BiSolidMessageError />
+                        <span>Erreur</span>
+                    </h2>
                 </div>
                 <div>
                     <p align='center'>Oups ! Une erreur s'est produite.</p>
@@ -23,7 +27,7 @@ export default function Error() {
                 <div>
                     <p>
                         <em>
-                            Statut : {error.statusText.toLowerCase() || error.message.toLowerCase()}
+                            Statut : {error && (error.statusText || error.message).toLowerCase()}
                         </em>
                     </p>
                 </div>

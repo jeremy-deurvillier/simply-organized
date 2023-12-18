@@ -1,18 +1,24 @@
 .activity {
+    color: #F8D9C6;
     background-color: #FB9649;
     position: relative;
     border-radius: 18px;
     overflow: hidden;
-    padding: 5px;
+    padding: 5px 10px;
     margin: 5px;
 }
 
+.activity:hover .activityName {
+    color: #FFF;
+}
+
 .activityName {
-    font-size: 16px;
-    font-weight: bolder;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color .3s;
 }
 
 .projectName {
-    font-size: 14px;
-    font-weight: lighter;
+    font-size: 15px;
+    font-weight: bold;
 }

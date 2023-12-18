@@ -1,27 +1,63 @@
 .navbar {
     background-color: #fff;
+    height: 52px;
     border-radius: 10px 10px 0 0;
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 6px;
 }
 
 .navbar ul {
+    height: inherit;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
 }
 
+.navbar ul > li {
+    text-align: center;
+    flex: 0 1 25%;
+}
+
 .navbar a,
 .navbar a:visited {
+    font-size: 22px;
+    text-align: center;
     text-decoration: none;
-    color: black;
+    color: #FFB57D;
+    height: 52px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.navbar a > svg {
+    transform: translateY(5px);
+    transition: transform .3s;
+}
+
+.navbar a > span {
+    font-size: 12px;
+    display: block;
+    transform: translateY(50px);
+    transition: transform .3s;
 }
 
 .navbar a:hover {
-    text-decoration: underline;
+    color: #FB9649;
+}
+
+.navbar a:hover > svg {
+    transform: translateY(0);
+}
+
+.navbar a:hover > span {
+    transform: translateY(2px);
 }
 
 @media screen and (min-width: 768px) {
