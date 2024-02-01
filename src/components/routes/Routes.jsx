@@ -1,14 +1,18 @@
-import { Route, createRoutesFromElements, createBrowserRouter } from 'react-router-dom'
+import { Route, createRoutesFromElements, createBrowserRouter, Routes, Outlet } from 'react-router-dom'
 import Layout from '../layout/Layout'
 import Error from '../error/Error'
 import Today from '../today/Today'
 import Timer from '../timer/Timer'
+import Login from '../login/Login'
 
-const routes = createRoutesFromElements(
+const routes = createRoutesFromElements(<>
     <Route path='/' element={<Layout />} errorElement={<Error />}>
         <Route index element={<Today />} />
         <Route path='/activity/:id/pomodoro' element={<Timer />} />
     </Route>
-)
+    <Route path='/' element={<div><Outlet /></div>} errorElement={<Error />}>
+        <Route path='/login' element={<Login />} />
+    </Route>
+</>)
 
 export default createBrowserRouter(routes)
