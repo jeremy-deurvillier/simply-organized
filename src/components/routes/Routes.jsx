@@ -4,6 +4,7 @@ import Error from '../error/Error'
 import Today from '../today/Today'
 import Timer from '../timer/Timer'
 import Login from '../login/Login'
+import SignIn from '../signin/SignIn'
 
 const routes = createRoutesFromElements(<>
     <Route path='/' element={<Layout />} errorElement={<Error />}>
@@ -12,6 +13,7 @@ const routes = createRoutesFromElements(<>
     </Route>
     <Route path='/' element={<div><Outlet /></div>} errorElement={<Error />}>
         <Route path='/login' element={<Login />} />
+        <Route path='/signin' element={<SignIn />} />
     </Route>
 </>)
 
