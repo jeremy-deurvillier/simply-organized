@@ -7,12 +7,12 @@ export default function SignIn() {
         
         <Flex direction="column" gap="3" p="3">
             <Heading as="h3" align="center" color="orange">Inscription</Heading>
-            <form action="/login" method="post">
+            <form action="/signin" method="post">
                 <Flex direction="column" gap="3" mx="3" p="4">
                     <TextField.Input placeholder="Votre pseudo ou e-mail" />
                     <TextField.Input placeholder="Votre mot de passe" />
                     <TextField.Input placeholder="Votre mot de passe" />
-                    <Button color="violet">M'inscrire</Button>
+                    <Button color="plum">M'inscrire</Button>
                 </Flex>
             </form>
         </Flex>
