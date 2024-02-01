@@ -1,0 +1,26 @@
+.pomodoro {
+    height: calc(100vh - 52px); /* ***** 52px = height .header ***** */
+}
+
+.pomodoriList,
+.activityInfo,
+.playPause,
+.quicknotes {
+    flex: 0 1 50px;
+}
+
+.pomodoriList > div {
+    background-color: #B29EF8;
+    border-radius: 50%;
+}
+
+.timer {
+    font-size: 36px;
+    color: #FB9649;
+    width: 200px;
+    height: 200px;
+    border: 3px solid #FB9649;
+    border-radius: 50%;
+    box-sizing: border-box;
+    flex: 1 0 200px;
+}
