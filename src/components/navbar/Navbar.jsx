@@ -3,10 +3,10 @@ import { FaHouse, FaCalendar, FaTrophy, FaUser } from "react-icons/fa6"
 import './Navbar.css'
 
 const links = [
-  { text: 'Accueil', url: '/', icon: <FaHouse /> },
-  { text: 'Calendrier', url: '/calendar', icon: <FaCalendar /> },
-  { text: 'Récompenses', url: '/rewards', icon: <FaTrophy /> },
-  { text: 'Profil', url: '/profile', icon: <FaUser /> },
+  { text: 'Accueil', url: '/user/today', icon: <FaHouse /> },
+  { text: 'Calendrier', url: '/user/calendar', icon: <FaCalendar /> },
+  { text: 'Récompenses', url: '/user/rewards', icon: <FaTrophy /> },
+  { text: 'Profil', url: '/user', icon: <FaUser /> },
 ]
 
 export default function Navbar() {
