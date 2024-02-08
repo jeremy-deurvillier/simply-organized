@@ -17,7 +17,7 @@ const routes = createRoutesFromElements(<>
         <Route path='/goal' element={<Goal /> } />
         <Route path='/cta' element={<CallToAction />} />
     </Route>
-    <Route path='/auth' element={<div><Outlet /></div>} errorElement={<Error />}>
+    <Route path='/auth' element={<div style={{height: '100vh'}}><Outlet /></div>} errorElement={<Error />}>
         <Route index element={<Login />} />
         <Route path='/auth/new' element={<SignIn />} />
     </Route>
