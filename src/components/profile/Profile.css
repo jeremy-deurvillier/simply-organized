@@ -1,0 +1,44 @@
+.profileContainer {
+    padding-bottom: 52px;
+}
+
+.statisticsContent {
+    background: linear-gradient(0deg, #FFB57D, #FB9649);
+}
+
+.avatar span {
+    font-size: 3.4em;
+    font-weight: bold;
+    color: #FB9649;
+    background: #fff;
+}
+
+.userAlias {
+    color: #9D53FF;
+}
+
+.statisticsDetails {
+    color: #B29EF8;
+}
+
+.button,
+.button:visited {
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    color: #9D53FF;
+    background: #F8D9C6;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+.button:hover {
+    background: #fff;
+}
