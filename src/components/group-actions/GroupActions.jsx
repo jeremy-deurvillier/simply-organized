@@ -6,13 +6,13 @@ import './GroupActions.css'
 
 const availablesActions = {
     default: [
-        {text: 'Commencer', url: '/activity/:id/pomodoro', action: 'confirm', icon: <FaPlay />},
-        {text: 'Modifier', url: '/activity/:id/edit', action: '', icon: <FaPencil />},
-        {text: 'Supprimer', url: '/activity/:id/delete', action: 'confirm', icon: <FaTrashCan />},
+        {text: 'Commencer', url: '/user/activity/:id/timer', action: 'confirm', icon: <FaPlay />},
+        {text: 'Modifier', url: '/user/activity/:id/edit', action: '', icon: <FaPencil />},
+        {text: 'Supprimer', url: '/user/activity/:id/delete', action: 'confirm', icon: <FaTrashCan />},
     ],
     progress: [
-        {text: 'Valider', url: '/activity/:id/done', action: 'confirm', icon: <FaCheck />},
-        {text: 'Annuler', url: '/activity/:id/canceled', action: 'confirm', icon: <FaTimes />},
+        {text: 'Valider', url: '/user/activity/:id/done', action: 'confirm', icon: <FaCheck />},
+        {text: 'Annuler', url: '/user/activity/:id/canceled', action: 'confirm', icon: <FaTimes />},
     ]
 }
 
