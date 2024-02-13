@@ -1,6 +1,6 @@
 .headerLogo {
     background: linear-gradient(0deg, #FFB57D, #FB9649);
-    height: 50vh;
+    min-height: 50vh;
 }
 
 .logoWrapper {

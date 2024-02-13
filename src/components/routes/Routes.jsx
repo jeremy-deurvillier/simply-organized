@@ -1,11 +1,12 @@
-import { Route, createRoutesFromElements, createBrowserRouter, Routes, Outlet } from 'react-router-dom'
+import { Route, createRoutesFromElements, createBrowserRouter } from 'react-router-dom'
 import DiscoveryLayout from '../discovery/Layout'
 import Why from '../discovery/Why'
 import Goal from '../discovery/Goal'
 import CallToAction from '../discovery/CallToAction'
 import Error from '../error/Error'
-import Login from '../login/Login'
-import SignIn from '../signin/SignIn'
+import AuthLayout from '../auth/AuthLayout'
+import Login from '../auth/login/Login'
+import SignIn from '../auth/signin/SignIn'
 import Layout from '../layout/Layout'
 import Today from '../today/Today'
 import Timer from '../timer/Timer'
@@ -17,7 +18,7 @@ const routes = createRoutesFromElements(<>
         <Route path='/goal' element={<Goal /> } />
         <Route path='/cta' element={<CallToAction />} />
     </Route>
-    <Route path='/auth' element={<div style={{height: '100vh'}}><Outlet /></div>} errorElement={<Error />}>
+    <Route path='/auth' element={<AuthLayout />} errorElement={<Error />}>
         <Route index element={<Login />} />
         <Route path='/auth/new' element={<SignIn />} />
     </Route>

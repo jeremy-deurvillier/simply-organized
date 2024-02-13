@@ -1,13 +1,33 @@
-import { Box, Button, Callout, Flex, Heading, TextField } from "@radix-ui/themes";
-import HeaderLogo from "../header-logo/HeaderLogo";
+import { Box, Button, Callout, Flex, Heading, Text, TextField } from "@radix-ui/themes";
 import axios from "axios";
 import { useState } from "react";
-import { redirect } from "react-router-dom";
+import { Link, redirect } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
-import { login, setUser } from "../../features/AuthSlice";
+import { login, setUser } from "../../../features/AuthSlice";
+import './Login.css'
 
+/* ** Radix UI Styles.
+*/
+const contentWrapper = {
+    direction: "column",
+    align: "center",
+    justify: 'center',
+    height: { initial: '50%', sm: '100%' },
+    width: { initial: '100%', sm: '50%' },
+    gap: '3',
+    p: '4'
+}
+
+const formContent = {
+    direction: 'column',
+    gap: '3',
+    pt: '7',
+    width: { initial: 'max-content', sm: '100%' }
+}
+
+/* ** Rendering.
+*/
 export default function Login() {
-    const count = useSelector(state => state.auth.value)
     const token = useSelector(state => state.auth.token)
     const dispatch = useDispatch()
 
@@ -50,7 +70,7 @@ export default function Login() {
                         code: err.code,
                         message: err.message
                     });
-                    
+
                     return;
                 }
 
@@ -70,32 +90,6 @@ export default function Login() {
     const errorRight = {
         initial: 'auto',
         sm: '0'
-    }
-
-    const loginDirection = {
-        initial: 'column',
-        sm: 'row'
-    }
-
-    const loginHeight = {
-        initial: '100%'
-    }
-
-    const contentWrapper = {
-        initial: '100%',
-        sm: '50%'
-    }
-
-    const formContentWidth = {
-        initial: 'max-content',
-        sm: '100%'
-    }
-
-    const formStyle = {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minWidth: '50%'
     }
 
     function handleUsernameChange(e) {
@@ -120,19 +114,19 @@ export default function Login() {
 
     return (<>
         {showError()}
-        <Flex height={loginHeight} direction={loginDirection} >
-            <HeaderLogo />
+        <Flex {...contentWrapper}>
+            <Heading as="h3" align="center" color="orange">Connexion</Heading>
+            <form id="loginForm" method="post" className='loginForm'>
+                <Flex {...formContent}>
+                    <TextField.Input name="username" value={username} onChange={handleUsernameChange} placeholder="Votre e-mail ou identifiant" />
+                    <TextField.Input type="password" name="password" placeholder="Votre mot de passe" />
+                    <Button type="submit" color="plum" onClick={l}>Me connecter</Button>
 
-            <Flex direction="column" align="center" justify='center' height='100%' width={contentWrapper} gap="3" p="4">
-                <Heading as="h3" align="center" color="orange">Connexion</Heading>
-                <form id="loginForm" method="post" style={formStyle}>
-                    <Flex direction="column" gap="3" pt="7" width={formContentWidth}>
-                        <TextField.Input name="username" value={username} onChange={handleUsernameChange} placeholder="Votre e-mail ou identifiant" />
-                        <TextField.Input type="password" name="password" placeholder="Votre mot de passe" />
-                        <Button type="submit" color="plum" onClick={l}>Me connecter</Button>
-                    </Flex>
-                </form>
-            </Flex>
+                    <Text as='p' align='center' mt='5'>
+                        Pas de compte ? <Link to='/auth/new'>S'inscrire</Link>
+                    </Text>
+                </Flex>
+            </form>
         </Flex>
     </>)
 }
