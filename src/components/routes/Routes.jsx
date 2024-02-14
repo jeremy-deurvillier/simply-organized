@@ -26,7 +26,7 @@ const routes = createRoutesFromElements(<>
         <Route index element={<Profile />} />
 
         <Route path='/user/today' element={<Today />} />
-        <Route path='/user/activity/:id/pomodoro' element={<Timer />} />
+        <Route path='/user/activity/:id/timer' element={<Timer />} />
     </Route>
 </>)
 
