@@ -1,31 +1,41 @@
+import { useSelector } from 'react-redux'
 import Activity from '../activity/Activity'
 import './Today.css'
 
-const projects = [
-  {id:1, title: 'Projet 1', description: ''},
-  {id:1, title: 'Projet 2', description: ''},
-]
+function activitiesElement(projects) {
+    return projects.map(project => {
+        if (project.activities.length > 0) {
+            return project.activities.map(activity => {
+                let activityCopy = { ...activity, project: project }
 
-const activities = [
-  {id:1, name: 'Mon titre 1', state: {done: false, progress: false}, project: projects[0]},
-  {id:2, name: 'Mon titre 2', state: {done: false, progress: true}, project: projects[0]},
-  {id:3, name: 'Mon titre 3', state: {done: false, progress: false}, project: projects[1]},
-  {id:4, name: 'Mon titre 4', state: {done: false, progress: true}, project: projects[1]},
-  {id:5, name: 'Mon titre 5', state: {done: false, progress: false}, project: projects[1]},
-]
+                return <Activity key={activityCopy.id} activity={activityCopy} />
+            })
+        } else {
+            let activity = {
+                id: 'project_' + project.id,
+                name: project.title,
+                state: { done: false, progress: false },
+                project: project
+            }
+
+            return <Activity key={activity.id} activity={activity} />
+        }
+    })
+}
 
 export default function Today() {
-  return (
-    <section className='todayPage'>
-        <h2>
-            Aujourd'hui
-            <span className='badge'>{activities.length}</span>
-        </h2>
-        <div className='todayContent'>
-            {
-              activities.map(activity => <Activity  key={activity.id} activity={activity} />)
-            }
-        </div>
-    </section>
-  )
+    const projects = useSelector(state => state.projects.list)
+    const activities = activitiesElement(projects)
+
+    return (
+        <section className='todayPage'>
+            <h2>
+                Aujourd'hui
+                <span className='badge'>{projects.length}</span>
+            </h2>
+            <div className='todayContent'>
+                {activities}
+            </div>
+        </section>
+    )
 }
