@@ -2,13 +2,19 @@ import { useSelector } from 'react-redux'
 import Activity from '../activity/Activity'
 import './Today.css'
 
-function activitiesElement(projects) {
-    return projects.map(project => {
+/* ** Parcours la liste des projets et récupère les activités.
+* 
+* @return Array categories Une liste d'activités.
+*/
+function getActivities(projects) {
+    let activities = []
+
+    projects.map(project => {
         if (project.activities.length > 0) {
-            return project.activities.map(activity => {
+            project.activities.map(activity => {
                 let activityCopy = { ...activity, project: project }
 
-                return <Activity key={activityCopy.id} activity={activityCopy} />
+                activities.push(activityCopy)
             })
         } else {
             let activity = {
@@ -18,23 +24,25 @@ function activitiesElement(projects) {
                 project: project
             }
 
-            return <Activity key={activity.id} activity={activity} />
+            activities.push(activity)
         }
     })
+
+    return activities
 }
 
 export default function Today() {
     const projects = useSelector(state => state.projects.list)
-    const activities = activitiesElement(projects)
+    const activities = getActivities(projects)
 
     return (
         <section className='todayPage'>
             <h2>
                 Aujourd'hui
-                <span className='badge'>{projects.length}</span>
+                <span className='badge'>{activities.length}</span>
             </h2>
             <div className='todayContent'>
-                {activities}
+                {activities.map(activity => <Activity key={activity.id} activity={activity} />)}
             </div>
         </section>
     )

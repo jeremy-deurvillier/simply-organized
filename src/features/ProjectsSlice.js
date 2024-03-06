@@ -22,23 +22,21 @@ export const projectsSlice = createSlice({
         list: projects,
     },
     reducers: {
-        getCollection: (state, action) => {
+        getProjects: (state, action) => {
             // get Collection from database
-            state.list = action.payload
+            return state.list = action.payload
         },
-        getProject: (state, action) => {
+        getProjectById: (state, action) => {
             return state.list.filter((project) => project.activities.includes(action.payload))
         },
-        projectByItem: (state, action) => {
-            state.list.map((p) => {
-                p.activities.map((a) => {
-                    a.project = p
-                })
-            })
+        getActivityById: (state, action) => {
+            let r = activities.filter(activity => activity.id === new Number(action.payload))
+            console.log(action.payload);
+            return r
         }
     }
 })
 
-export const { getCollection, getProject, projectByItem } = projectsSlice.actions
+export const { getProjects, getProjectById, getActivityById } = projectsSlice.actions
 
 export default projectsSlice.reducer
